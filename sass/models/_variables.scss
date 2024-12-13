@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+$modo-claro: (
+  'bg-primario': #f9fafb,
+  'bg-card': #e5e7eb,
+  'texto-primario': #1f2937,
+  'texto-secundario': #4b5563
+);
+$modo-oscuro: (
+  'bg-primario': #1f2937,
+  'bg-card': #374151,
+  'texto-primario': #f3f4f6,
+  'texto-secundario': #d1d5db
+);
+$btn-claro: (
+  'bg-primario': #1f2937,
+  'bg-hover': #4B5563,
+  'bg-disable': #D1D5DB,
+  'txt-disable': #9CA3AF,
+  'texto-primario': #F9FAFB
+);
+$btn-oscuro: (
+  'bg-primario': #E5E7EB,
+  'bg-hover': #9CA3AF,
+  'bg-disable': #111827,
+  'txt-disable': #4B5563  ,
+  'texto-primario':   #374151
+);
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #1f2937;
+  overflow-x: hidden;
+}
+

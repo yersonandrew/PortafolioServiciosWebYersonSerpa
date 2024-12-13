@@ -1,0 +1,60 @@
+@use 'variables';
+@use 'sass:map';
+%h1{
+  font-family: sans-serif;
+  padding: 0 10px;
+  font-size: 2.5em;
+  color: map.get(variables.$modo-oscuro, 'texto-primario'); 
+  text-wrap: balance;
+}
+%h2{
+  padding: 0 10px;
+  color: map.get(variables.$modo-oscuro, 'texto-primario');
+  font-family: sans-serif;
+  font-size: 1.8em; 
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-wrap: balance;
+}
+%h3{
+  margin: 0;
+  text-wrap: balance;
+  color: map.get(variables.$modo-oscuro, 'texto-secundario');
+  font-family: sans-serif;
+  font-size: 1.8em; 
+}
+%pUno{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  color: map.get(variables.$modo-oscuro, 'texto-secundario');
+}
+%pDos{
+  margin: 0;
+  color: map.get(variables.$modo-oscuro, 'texto-secundario');
+  font-family: sans-serif;
+  font-size: 1em; 
+}
+%contenedor{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+%btn-primario{
+  padding: 10px 30px;
+  background-color: map.get(variables.$btn-oscuro, 'bg-primario');
+  font-family: sans-serif;
+  border-radius: 5px;
+  text-transform: capitalize;
+  color: map.get(variables.$btn-oscuro, 'texto-primario');
+  text-decoration: none;
+  
+}
+%boxShadow{
+  -webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.68);
+  -moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.68);
+  box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.68);
+}
+
+

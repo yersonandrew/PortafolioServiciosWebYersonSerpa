@@ -1,0 +1,23 @@
+// modulos
+
+
+@use 'models/index';
+@use 'components/header';
+@use 'components/inicio';
+@use 'components/proyectos';
+@use 'components/conocimientos';
+@use 'components/stacks';
+@use 'components/contacto';
+@use 'components/footer';
+
+
+.btn-primario {
+  @extend %btn-primario;
+}
+
+//background: darken($color: #000000, $amount: 0); de 0 a 100
+//background: lighten($color: #000000, $amount: 0); de 0 a 100
+//background: scale-color($color: #000000, $red: 1, $green: 2, $blue: 3, $saturation: 0%, $lightness: 0%, $alpha: 1.0)
+//background: mix($color: #000000, $color: #000000, $weight: 0.5)
+
+

@@ -1,0 +1,95 @@
+@use '../models/index';
+@use 'sass:map';
+
+
+.conocimiento{
+  padding-top: 120px;
+  width: 100%;
+  font-size: 18px;
+
+  h2{
+    @extend %h2;
+    
+  }
+  &__container{
+    background-color: map.get(index.$modo-oscuro, 'bg-primario');
+    @extend %contenedor;
+    max-width: 1220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  &__item{
+    @extend %boxShadow;
+    flex: 1 1 400px;
+    
+    @include index.media(tablet){
+      display: flex;
+      flex: 1 1 450px;
+    }
+  }
+
+  &__img{
+    @include index.media(tablet){
+      width: 100%;
+      img{
+        width: inherit;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    
+  }
+  
+  &__descripcion{
+    padding: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h3 { 
+      @extend %h3;
+    }
+    @include index.media(tablet){
+      width: 100%;
+      padding-right: 40px;
+    }
+    
+  }
+  &__bootcamp{
+    margin: 20px 0;
+    span{
+      display: inline-block;
+      @extend %pUno;
+      text-transform: capitalize;
+      font-size: 1.2em;
+    }
+    p{
+      margin-bottom: 10px;
+      font-size: 1.4em;
+      @extend %pDos;
+      padding-top: 5px;
+      text-transform: capitalize;
+      font-weight: 800;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+
+  &__calificacion{
+    margin-bottom: 20px;
+    span{
+      color: #d7e60c;
+      font-size: 1.5em;
+      margin-right: 10px;
+    }
+  }
+
+  &__btn-primario{
+    margin: 20px 0;
+    text-align: center;
+  }
+  p{
+    @extend %pDos;
+  }
+}

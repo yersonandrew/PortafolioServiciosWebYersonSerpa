@@ -1,0 +1,14 @@
+doctype html
+html(lang="es")
+  include head.pug 
+  include mixin.pug 
+  include variables.pug 
+  body
+    include header.pug 
+    block contenido
+    include footer.pug
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap") 
+    script(src="../js/app.js") 
+    script(src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js") 
+    
+

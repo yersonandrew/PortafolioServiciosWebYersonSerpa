@@ -1,0 +1,16 @@
+header(class='header' id='inicio')
+  nav.header__menu-navegacion
+    .header__logo 
+      a(href='#inicio')
+        h2 Yerson
+          span Serpa
+    .header__btn-hamburguesa.header__btn-disable
+      span.header__linea-uno
+      span.header__linea-dos
+      span.header__linea-tres
+    +navegacion
+  seccion.contenido-header
+    .contenido-header__descripcion 
+      +headerContenido
+.img-position 
+  img(src="../assets/img/imagenes/img-01.jpg", alt="Imagen del perdil del portafolio", srcset="")

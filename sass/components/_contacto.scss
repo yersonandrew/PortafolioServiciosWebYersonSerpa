@@ -1,0 +1,93 @@
+@use '../models/index';
+@use 'sass:map';
+
+
+.contacto{
+  padding-top: 120px;
+  width: 100dvw;
+  h2{
+    @extend %h2;
+  }
+  &__container{
+    @extend %contenedor;
+  }
+  &__descripcion{
+    text-align: center;
+    padding: 10 20px;
+  }
+  p{
+    @extend %pUno;
+  }
+}
+
+
+
+
+.formulario{
+  margin: 50px 0;
+  font-size: 16px;
+  h3 {
+    @extend %h3;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  &__container{
+    max-width: 500px;
+    margin: 50px auto;
+ } 
+  &__campos{
+    display: grid;
+  }
+  label{
+  @extend %pUno;
+  margin: 20px 0;
+  text-transform: capitalize;
+  }
+  input{
+  padding: 5px 0;
+  background: none;
+  border: none;
+  border-bottom: 5px solid map.get(index.$modo-oscuro, 'texto-primario');
+  color: map.get(index.$modo-oscuro, 'texto-primario');
+  text-transform: capitalize;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+
+  
+  input::placeholder{
+    color: map.get(index.$modo-oscuro, 'bg-card');
+  }
+  
+  &__textarea{
+    width: 99.5%;
+    display: grid;
+    textarea{
+      width: inherit;
+      height: 80px;
+      resize: none;
+      border: none;
+      background: none;
+      border-bottom: 5px solid map.get(index.$modo-oscuro, 'texto-primario');
+      outline: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      &::placeholder{
+        color: map.get(index.$modo-oscuro, 'bg-card');
+      }
+    }
+  }
+  &__btn{
+    button{
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: map.get(index.$btn-oscuro, 'bg-disable');
+      color: map.get(index.$btn-oscuro, 'txt-disable');;
+      border: none;
+      margin: 20px 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+}
+

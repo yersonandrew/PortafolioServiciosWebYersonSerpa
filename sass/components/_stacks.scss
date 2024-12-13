@@ -1,0 +1,46 @@
+@use '../models/index';
+@use 'sass:map';
+
+
+
+.stacks {
+  width: 100%;
+  font-size: 18px;
+  h2{
+    @extend %h2;
+  }
+  &__container{
+    @extend %contenedor;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  &__item{
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    h3{
+      @extend %h3;
+    }
+    span{
+      @extend %pUno;
+    }
+    p{
+      @extend %pDos;
+    }
+  }
+  &__img{
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      object-fit: contain;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+//Mixins
+
+//botones
+
+
+
+
+//navar 
+
+
+
+mixin navegacion()
+  .header__menu-lista.lista-menu
+    ul
+      li
+        a(href='' + links[0])=title__navar[0]
+      li
+        a(href='' + links[1])=title__navar[1]
+      li
+        a(href='' + links[2])=title__navar[2]
+      li
+        a(href='' + links[3])=title__navar[3]
+
+
+mixin lista-reutilizable(link,icon)
+  li 
+    a(href='' + link target='_blank')
+      span(class="" + icon)
+
+// contenido header
+
+mixin headerContenido()
+  h1=nombres 
+  p diseñador web fronted
+  ul
+    +lista-reutilizable('https://github.com/yersonandrew','bx bxl-github')
+    +lista-reutilizable('https://www.instagram.com/yersonet/','bx bxl-instagram')
+    +lista-reutilizable('https://www.facebook.com/ridersoft.tecnology/','bx bxl-facebook-circle')
+    +lista-reutilizable('https://www.linkedin.com/in/rider-soft-5b33a2234/','bx bxl-linkedin')
+
+
+mixin footerContenido()
+  h2=nombres 
+  p diseñador web fronted
+  ul
+    +lista-reutilizable('https://github.com/yersonandrew','bx bxl-github')
+    +lista-reutilizable('https://www.instagram.com/yersonet/','bx bxl-instagram')
+    +lista-reutilizable('https://www.facebook.com/ridersoft.tecnology/','bx bxl-facebook-circle')
+    +lista-reutilizable('https://www.linkedin.com/in/rider-soft-5b33a2234/','bx bxl-linkedin')
+
+
+
+
+
+
+
+
+// cards
+
+// iconos imagenes
+
+mixin icono-imagenes(icon)
+  li 
+    img(src='' + icon)
+//card-uno
+mixin card-uno(imagenUno,title,text,link,tg,btnModo,btn)
+  .proyectos__card 
+    .proyectos__img 
+      img(src='' + imagenUno)
+    .proyectos__descripcion 
+      h3=title
+      p=text
+      span tecnologias aplicadas:
+      ul
+        +icono-imagenes(imagenesIcon[0])
+        +icono-imagenes(imagenesIcon[1])
+        +icono-imagenes(imagenesIcon[2])
+        +icono-imagenes(imagenesIcon[3])
+      .proyectos__btn-primario
+        a(href='' + link, target='' + tg, class='' + btnModo)=btn
+
+
+//card dos
+
+
+mixin caja-dos(img,title,academia,instructor,text)
+  .conocimiento__item
+    .conocimiento__img 
+      img(src="" + img, alt="Captura del proyecto realizado", srcset="")
+    .conocimiento__descripcion
+      h3=title
+      .conocimiento__bootcamp 
+        span academia
+        p=academia
+        span instructor
+        p=instructor
+      .conocimiento__calificacion
+        span(class='bx bxs-star')
+        span(class='bx bxs-star')
+        span(class='bx bxs-star')
+        span(class='bx bxs-star-half')
+        //bx bxs-star-half estrella mitad
+        //bx bx-star estrella vacia
+        //bx bxs-star estrella vacia
+        span(class='bx bx-star')
+      p=text
+      .conocimiento__btn-primario.btn-primario
+        a ver certificado
+
+
+//STACKS TECNOLOGICAS
+
+mixin stacks(img,title,nivel,text)
+  .stacks__item
+    .stacks__img 
+      img(src="" + img, alt="Logo de la tecnologia web", srcset="")
+    h3=title 
+    span=nivel 
+    p=text
+
+
+// formulario
+
+
+
+
+mixin formulario(name,label,type,id,placeholder)
+  .formulario__campos
+    label(for='' + name)=label 
+    input(type='' + type, id='' + id, placeholder='' + placeholder)
