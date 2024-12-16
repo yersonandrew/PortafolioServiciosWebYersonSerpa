@@ -13,13 +13,13 @@ mixin navegacion()
   .header__menu-lista.lista-menu
     ul
       li
-        a(href='' + links[0])=title__navar[0]
+        a(href='' + links[0],class='item-nav-1')=title__navar[0]
       li
-        a(href='' + links[1])=title__navar[1]
+        a(href='' + links[1],class='item-nav-2')=title__navar[1]
       li
-        a(href='' + links[2])=title__navar[2]
+        a(href='' + links[2],class='item-nav-3')=title__navar[2]
       li
-        a(href='' + links[3])=title__navar[3]
+        a(href='' + links[3],class='item-nav-4')=title__navar[3]
 
 
 mixin lista-reutilizable(link,icon)
@@ -80,11 +80,38 @@ mixin card-uno(imagenUno,title,text,link,tg,btnModo,btn)
         a(href='' + link, target='' + tg, class='' + btnModo)=btn
 
 
+
+// ventana modal
+
+
+mixin ventanaModal()
+  .modal
+    .modal__contenido
+      .modal__botones
+        span
+          i(class='bx bx-x')
+        span 
+          i(class='bx bxs-download')
+      
+
+
+
+
+
 //card dos
 
 
-mixin caja-dos(img,title,academia,instructor,text)
+mixin caja-dos(img,title,academia,instructor,text,ruta,nombreArchivo)
   .conocimiento__item
+    .modal
+      .modal__contenido
+        .modal__botones
+          span
+            i(class='bx bx-x')
+          span 
+            i(class='bx bxs-download')
+        .modal__img
+          img(src="../assets/img/certificados/ux-iu.jpg")
     .conocimiento__img 
       img(src="" + img, alt="Captura del proyecto realizado", srcset="")
     .conocimiento__descripcion
@@ -99,13 +126,15 @@ mixin caja-dos(img,title,academia,instructor,text)
         span(class='bx bxs-star')
         span(class='bx bxs-star')
         span(class='bx bxs-star-half')
+        span(class='bx bx-star')
         //bx bxs-star-half estrella mitad
         //bx bx-star estrella vacia
         //bx bxs-star estrella vacia
-        span(class='bx bx-star')
       p=text
       .conocimiento__btn-primario.btn-primario
-        a ver certificado
+        a(href='' + ruta, download='' + nombreArchivo)
+          span certificado
+          i(class='bx bxs-download')
 
 
 //STACKS TECNOLOGICAS

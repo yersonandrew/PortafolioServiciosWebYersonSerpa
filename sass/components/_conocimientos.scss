@@ -14,7 +14,6 @@
   &__container{
     background-color: map.get(index.$modo-oscuro, 'bg-primario');
     @extend %contenedor;
-    max-width: 1220px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -26,7 +25,13 @@
     
     @include index.media(tablet){
       display: flex;
-      flex: 1 1 450px;
+      flex: 1 1 350px;
+    }
+    @include index.media(desktop-m){
+      flex-basis: 500px;
+    }
+    @include index.media(desktop-l){
+      flex-basis: 600px;
     }
   }
 
@@ -88,8 +93,69 @@
   &__btn-primario{
     margin: 20px 0;
     text-align: center;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      @extend %pUno;
+      color: map.get(index.$btn-oscuro, 'texto-primario');
+      text-decoration: none;
+
+    }
+    i{
+      font-size: 1.6em;
+    }
   }
   p{
     @extend %pDos;
+  }
+}
+
+
+
+//pendiente el proceso 
+
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  width: 100dvw;
+  height: 100vh;
+  background-color: #7879736b;
+  display: flex;
+  transform: scale(0);
+  flex-direction: column;
+  align-items: center;
+  &__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+  &__botones{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i{
+      font-size: 40px;
+      color: map.get(index.$modo-oscuro, 'texto-primario');
+    }
+  }
+  &__img{
+    width: 100%;
+    max-height: 80dvh;
+    margin-top: 50px;
+    img{
+      width: 100%;
+      object-fit: contain;
+      height: 100%;
+    }
   }
 }

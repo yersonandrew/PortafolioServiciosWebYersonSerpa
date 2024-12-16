@@ -4,8 +4,7 @@
 
 .header{
   width: 100%;
-  height: 80dvh;
-  overflow: hidden;
+  height: 90vh;
   font-size: 16px;
   background: {
     image: linear-gradient(#1f293786,#1f293786 ), url('../assets/img/imagenes/img-03.jpg');
@@ -171,6 +170,8 @@
   display: flex;
   justify-content: center;
   img{
+    position: relative;
+    z-index: 1001;
     width: 300px;
     border: 10px solid map.get(index.$modo-oscuro, 'bg-card');
     height: 300px;

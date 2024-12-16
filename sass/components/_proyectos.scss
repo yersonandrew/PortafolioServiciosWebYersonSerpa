@@ -9,7 +9,6 @@
   text-align: center;
   &__contenido{
     @extend %contenedor;
-    max-width: 95%;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
