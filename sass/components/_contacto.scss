@@ -13,15 +13,16 @@
   }
   &__descripcion{
     text-align: center;
-    padding: 10 20px;
+    width: clamp(300px, 90%, 700px);
+    margin: auto;
+    display: grid;
+    gap: 20px;
   }
   p{
     @extend %pUno;
+    
   }
 }
-
-
-
 
 .formulario{
   margin: 50px 0;
@@ -35,59 +36,131 @@
     max-width: 500px;
     margin: 50px auto;
  } 
-  &__campos{
-    display: grid;
+  &__campos,&__textarea{
+    margin-bottom: 20px;
+    
+    .formulario__parrafo-error{
+      @extend %pError;
+      text-align: end;
+      padding: 10px 0;
+      display: none;
+      transition: display .3s ease-in;
+      &--activo{
+        display: block;
+      }
+    }
   }
+
   label{
   @extend %pUno;
-  margin: 20px 0;
+  display: block;
+  padding-bottom: 10px;
   text-transform: capitalize;
-  }
-  input{
-  padding: 5px 0;
-  background: none;
-  border: none;
-  border-bottom: 5px solid map.get(index.$modo-oscuro, 'texto-primario');
-  color: map.get(index.$modo-oscuro, 'texto-primario');
-  text-transform: capitalize;
-  outline: none;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
   }
 
+  &__inputs{
+    position: relative;
+    top: 0;
+    width: 100%;
+    input{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: index.$bg-input;
+    border: none;
+    border-bottom: 5px solid map.get(index.$modo-oscuro, 'texto-primario');
+    color: map.get(index.$modo-oscuro, 'texto-primario');
+    text-transform: capitalize;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
 
+    i{
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.2em;
+      z-index: 10;
+      color: map.get(index.$modo-oscuro, 'texto-success');
+      transition: opacity .3s ease-in;
+      opacity: 0;
+    }
+  }
 
-  
-  input::placeholder{
-    color: map.get(index.$modo-oscuro, 'bg-card');
+  input::placeholder,textarea::placeholder{
+    color: map.get(index.$modo-oscuro, 'texto-secundario');
   }
   
   &__textarea{
-    width: 99.5%;
+    width: 100%;
     display: grid;
     textarea{
+      padding: 10px;
       width: inherit;
       height: 80px;
       resize: none;
       border: none;
-      background: none;
+      background-color: index.$bg-input;
       border-bottom: 5px solid map.get(index.$modo-oscuro, 'texto-primario');
+      color: map.get(index.$modo-oscuro, 'texto-secundario');
       outline: none;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      &::placeholder{
-        color: map.get(index.$modo-oscuro, 'bg-card');
-      }
+      
     }
   }
-  &__btn{
+
+  //mensaje de error y de exito
+  
+  &__mensaje-error{
+    background-color: map.get(index.$modo-oscuro, 'bg-card');
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    transition: display .3s ease-in;
+    &--activo{
+      display: flex;
+    }
+    p{
+      color: map.get(index.$modo-oscuro, 'texto-error');
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  
+  &__mensaje{
+    padding-top: 10px;
     button{
       padding: 10px 20px;
       border-radius: 5px;
-      background-color: map.get(index.$btn-oscuro, 'bg-disable');
-      color: map.get(index.$btn-oscuro, 'txt-disable');;
+      color: map.get(index.$btn-oscuro, 'texto-primario');;
       border: none;
       margin: 20px 0;
+      text-transform: capitalize;
       font-family: Verdana, sans-serif;
+      cursor: pointer;
+      transition: all .3s ease-in;
+      &:hover{
+        background-color: map.get(index.$btn-oscuro, 'bg-hover');
+        color: map.get(index.$btn-oscuro, 'txt-hover');;
+      }
+    }
+    p{
+      color: map.get(index.$modo-oscuro, 'texto-success');
+      text-transform: capitalize;
+      font-weight: bold;
+      text-align: center;
+    }
+    &-enviado{
+      background-color: map.get(index.$modo-oscuro, 'bg-card');
+      padding: 10px;
+      text-transform: capitalize;
+      display: none;
+      &--activo{
+        display: block;
+      }
     }
   }
 }
-

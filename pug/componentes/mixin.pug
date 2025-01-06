@@ -10,7 +10,7 @@
 
 
 mixin navegacion()
-  .header__menu-lista.lista-menu
+  .header__menu-lista.header__menu-oculto
     ul
       li
         a(href='' + links[0],class='item-nav-1')=title__navar[0]
@@ -51,7 +51,13 @@ mixin footerContenido()
 
 
 
+// titulo separador
 
+mixin titulo-separador(tituloUno,tituloDos)
+  .titulo-separador
+    h2=tituloUno
+    h2 Y 
+    h2=tituloDos
 
 
 
@@ -72,10 +78,11 @@ mixin card-uno(imagenUno,title,text,link,tg,btnModo,btn)
       p=text
       span tecnologias aplicadas:
       ul
-        +icono-imagenes(imagenesIcon[0])
         +icono-imagenes(imagenesIcon[1])
-        +icono-imagenes(imagenesIcon[2])
+        +icono-imagenes(imagenesIcon[5])
         +icono-imagenes(imagenesIcon[3])
+        +icono-imagenes(imagenesIcon[4])
+        +icono-imagenes(imagenesIcon[2])
       .proyectos__btn-primario
         a(href='' + link, target='' + tg, class='' + btnModo)=btn
 
@@ -103,15 +110,6 @@ mixin ventanaModal()
 
 mixin caja-dos(img,title,academia,instructor,text,ruta,nombreArchivo)
   .conocimiento__item
-    .modal
-      .modal__contenido
-        .modal__botones
-          span
-            i(class='bx bx-x')
-          span 
-            i(class='bx bxs-download')
-        .modal__img
-          img(src="../assets/img/certificados/ux-iu.jpg")
     .conocimiento__img 
       img(src="" + img, alt="Captura del proyecto realizado", srcset="")
     .conocimiento__descripcion
@@ -153,7 +151,7 @@ mixin stacks(img,title,nivel,text)
 
 
 
-mixin formulario(name,label,type,id,placeholder)
-  .formulario__campos
-    label(for='' + name)=label 
-    input(type='' + type, id='' + id, placeholder='' + placeholder)
+mixin formulario(label,nameLabel,type,id,placeholder,name)
+  label(for='' + label)=nameLabel 
+  .formulario__inputs
+    input(type='' + type, id='' + id, placeholder='' + placeholder class='inputs', name='' + name)

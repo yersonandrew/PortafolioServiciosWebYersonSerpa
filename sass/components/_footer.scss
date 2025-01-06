@@ -10,8 +10,8 @@
     display: flex;
     justify-content: center;
     img{
-      width: 300px;
-      height: 300px;
+      width: clamp(250px, 30%, 350px);
+      height: clamp(250px, 30%, 350px);
       border-radius: 50%;
       border: 10px solid map.get(index.$modo-oscuro, 'bg-card');
       position: relative;
@@ -36,6 +36,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    gap: 20px;
     font-size: 18px;
     text-align: center;
     h2{

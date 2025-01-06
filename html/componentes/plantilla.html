@@ -7,15 +7,18 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/app.css">
+    <link rel="icon" href="../assets/img/logos/logo-principal.png">
     <title>Portafolio YersonAndres</title>
   </head>
   <!--Mixins-->
   <!--botones-->
   <!--navar -->
   <!-- contenido header-->
+  <!-- titulo separador-->
   <!-- cards-->
   <!-- iconos imagenes-->
   <!--card-uno-->
+  <!-- ventana modal-->
   <!--card dos-->
   <!--STACKS TECNOLOGICAS-->
   <!-- formulario-->
@@ -23,31 +26,30 @@
   <body>
     <header class="header" id="inicio">
       <nav class="header__menu-navegacion">
-        <div class="header__logo"> <a href="index.html">
-            <h2>Yerson<span>Serpa</span></h2></a></div>
-        <div class="header__btn-hamburguesa"> <span class="header__linea-uno"></span><span class="header__linea-dos"></span><span class="header__linea-tres"></span></div>
-          <div class="header__menu-lista lista-menu">
+        <div class="header__logo"> <a href="#inicio">
+            <h2> <span>Y</span><span>A</span></h2></a></div>
+        <div class="header__btn-hamburguesa"><span class="header__btn-hamburguesa-uno"></span><span class="header__btn-hamburguesa-dos"></span><span class="header__btn-hamburguesa-tres"></span></div>
+          <div class="header__menu-lista header__menu-oculto">
             <ul>
-              <li><a href="#inicio">inicio</a></li>
-              <li><a href="#inicio">proyectos</a></li>
-              <li><a href="#inicio">certificados</a></li>
-              <li><a href="#inicio">contacto</a></li>
+              <li><a class="item-nav-1" href="#inicio">inicio</a></li>
+              <li><a class="item-nav-2" href="#proyectos">proyectos</a></li>
+              <li><a class="item-nav-3" href="#certificados">certificados</a></li>
+              <li><a class="item-nav-4" href="#contacto">contacto</a></li>
             </ul>
           </div>
       </nav>
-      <seccion class="contenido-header">
+      <section class="contenido-header">
         <div class="contenido-header__descripcion"> 
             <h1>Yerson Andres Chogo Serpa</h1>
             <p>diseñador web fronted</p>
             <ul>
-                <li> <a><span class="bx bxl-github"></span></a></li>
-                <li> <a><span class="bx bxl-instagram"></span></a></li>
-                <li> <a><span class="bx bxl-whatsapp"></span></a></li>
-                <li> <a><span class="bx bxl-facebook-circle"></span></a></li>
-                <li> <a><span class="bx bxl-linkedin"></span></a></li>
+                <li> <a href="https://github.com/yersonandrew" target="_blank"><span class="bx bxl-github"></span></a></li>
+                <li> <a href="https://www.instagram.com/yersonet/" target="_blank"><span class="bx bxl-instagram"></span></a></li>
+                <li> <a href="https://www.facebook.com/ridersoft.tecnology/" target="_blank"><span class="bx bxl-facebook-circle"></span></a></li>
+                <li> <a href="https://www.linkedin.com/in/rider-soft-5b33a2234/" target="_blank"><span class="bx bxl-linkedin"></span></a></li>
             </ul>
         </div>
-      </seccion>
+      </section>
     </header>
     <div class="img-position"> <img src="../assets/img/imagenes/img-01.jpg" alt="Imagen del perdil del portafolio" srcset=""></div>
     <footer class="footer"> 
@@ -57,17 +59,16 @@
             <h2>Yerson Andres Chogo Serpa</h2>
             <p>diseñador web fronted</p>
             <ul>
-                <li> <a><span class="bx bxl-github"></span></a></li>
-                <li> <a><span class="bx bxl-instagram"></span></a></li>
-                <li> <a><span class="bx bxl-whatsapp"></span></a></li>
-                <li> <a><span class="bx bxl-facebook-circle"></span></a></li>
-                <li> <a><span class="bx bxl-linkedin"></span></a></li>
+                <li> <a href="https://github.com/yersonandrew" target="_blank"><span class="bx bxl-github"></span></a></li>
+                <li> <a href="https://www.instagram.com/yersonet/" target="_blank"><span class="bx bxl-instagram"></span></a></li>
+                <li> <a href="https://www.facebook.com/ridersoft.tecnology/" target="_blank"><span class="bx bxl-facebook-circle"></span></a></li>
+                <li> <a href="https://www.linkedin.com/in/rider-soft-5b33a2234/" target="_blank"><span class="bx bxl-linkedin"></span></a></li>
             </ul>
         </div>
       </div>
       <div class="footer__creditos">
-        <p>todos los derechos reservados</p>
-        <p> <span>diseño por: </span><span>YersonSerpa</span></p>
+        <p>todos los derechos reservados &copy;</p>
+        <p> <span>diseño por : </span><span>YersonSerpa</span></p>
       </div>
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&amp;callback=iniciarMap"> </script>

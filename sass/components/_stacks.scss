@@ -33,6 +33,8 @@
     }
     p{
       @extend %pDos;
+      width: clamp(300px, 100%, 400px);
+      margin: auto;
     }
   }
   &__img{

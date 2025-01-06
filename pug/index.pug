@@ -6,46 +6,57 @@ block contenido
       span(class='bx bxs-pointer')
       p A continuación te presento la gama de servicios que puedo ofrecer. También te especifico las tecnologías que actualmente domino y en la cual desarrollo mis proyectos
   main.proyectos(id='proyectos')
-    h2=tituloSeparador[0]
+  
+    +titulo-separador('proyectos realizados','tecnologias aplicadas')
     .proyectos__contenido
       +card-uno('../assets/img/imagenes/img-02.jpg', nombresEmpresaProyectos[0], 'Es una empresa tecnológica que ofrece un Servicio Técnico en el área de sistemas. en esta pagina podemos observar datos de la empresa y sus servicios al igual que puedes contactar por algún servicio.', 'https://dashing-gumdrop-c31117.netlify.app/','_blank', 'proyectos__btn-primario--on' , 'ir a la pagina')
       +card-uno('../assets/img/imagenes/img-08.jpg', nombresEmpresaProyectos[1], 'Empresa enfocada en su excelente servicio en micrielectronica brindando una solucion tanto efectiva como futurista como su lema los representa "the furure is now"; ademas de brindar un excelente servicio al cliente.', '#proyectos','_self' , 'proyectos__btn-primario--on btn-primario--disable', 'en proceso')
   section.conocimiento(id='certificados')
-
-    h2=tituloSeparador[1]
+    +titulo-separador('cursos realizados','certificados obtenidos')
     .conocimiento__container
       +caja-dos('../assets/img/imagenes/img-04.jpg', 'Curso UX UI Design + Diseño Web y Mobile',academia[0],instructor[0],'Este curso es perfecto para aquellos que desean adquirir habilidades de diseño UX/UI para crear productos y servicios innovadores, y convertirse en un diseñador UX/UI profesiona','../assets/documentos/disenioUX-UI.pdf','CERTIFICADO UX/UI')
-      +caja-dos('../assets/img/imagenes/img-05.jpg', 'Aprende Sass Desde Cero y descubre el potencial para mejorar tu código CSS.',academia[0],instructor[1],'Este curso en su mayoría es teórico ya que nos concentraremos en todas las funcionalidades de Sass.','../assets/documentos/curso-sass.pdf','CERTIFICADO SASS')
+      +caja-dos('../assets/img/imagenes/img-05.jpg', 'Sass Desde Cero y descubre el potencial para mejorar tu código CSS.',academia[0],instructor[1],'Este curso en su mayoría es teórico ya que nos concentraremos en todas las funcionalidades de Sass.','../assets/documentos/curso-sass.pdf','CERTIFICADO SASS')
       +caja-dos('../assets/img/imagenes/img-06.jpg', 'React desde cero: Hooks y State hasta TypeScript, Zod, Zustand, React Query, Next.js, React Router, MERN y PERN',academia[0],instructor[2],'El único curso en Udemy que enseña React con proyectos del mundo real; Incluso si tus bases de JavaScript no son muy fuertes el curso tiene una introducción con todo lo que debes saber.','../assets/documentos/proceso.pdf','en proceso')
-      +caja-dos('../assets/img/imagenes/img-07.jpg', 'Aprende el Lenguaje de Programación Web más popular paso a paso con +20 Proyectos - Incluye Proyecto MERN Full Stack',academia[0],instructor[2],'El curso incluye la Sintaxis de ECMAScript ES6, ES7, ES8, ES9, ES10, ES11 y ES12 o también conocida como JavaScript Moderno.','../assets/documentos/proceso.pdf','en proceso')
+      +caja-dos('../assets/img/imagenes/img-07.jpg', 'JavaScript Lenguaje de Programación Web más popular paso a paso con +20 Proyectos - Incluye Proyecto MERN Full Stack',academia[0],instructor[2],'El curso incluye la Sintaxis de ECMAScript ES6, ES7, ES8, ES9, ES10, ES11 y ES12 o también conocida como JavaScript Moderno.','../assets/documentos/proceso.pdf','en proceso')
   section.stacks
     h2=tituloSeparador[2]
     .stacks__container 
-      +stacks('../assets/img/logos/html.png',stacks[0],level[2],'Manejo un nivel avanzado en este lenguaje; tambien trabajo con metodologia BEM para un codigo mas limpio y legible.')
-      +stacks('../assets/img/logos/css.png',stacks[1],level[2],'Con este lenguaje manejo a la perfecciio tanto flexbox como CSS Grid; tambien se usar animaciones simples y con scroll y mucho mas.')
-      +stacks('../assets/img/logos/js.png',stacks[2],level[1],'Este lenguaje de programacion aun lo sigo estudiando hasta perfeccionarlor.')
-      +stacks('../assets/img/logos/sass.png',stacks[3],level[2],'Este lenguaje es un complemento excelente para usar css en un nivel mas avanzado.')
-      +stacks('../assets/img/logos/pug.png',stacks[4],level[2],'Uso PUG para crear componentes y reemplazarlo por HTML5 al ser mas ordenado.')
-      +stacks('../assets/img/logos/figma.png',stacks[5],level[2],'Recientemente termine un curso y ya la domino en un nivel avanzado.')
-      +stacks('../assets/img/logos/node.png',stacks[6],level[1],'Con NODEJS lo uso para la compilaciones de pug y sass.')
-      +stacks('../assets/img/logos/git.png',stacks[7],level[1],'Con NODEJS lo uso para la compilaciones de pug y sass.')
-      +stacks('../assets/img/logos/github.png',stacks[8],level[1],'Con NODEJS lo uso para la compilaciones de pug y sass.')
+      +stacks('../assets/img/logos/html.png',stacks[0],level[2],'Poseo conocimientos avanzados de HTML, incluyendo el uso de etiquetas semánticas para mejorar la accesibilidad y SEO, creación y validación de formularios complejos, integración de multimedia, y el uso de atributos globales.')
+      +stacks('../assets/img/logos/css.png',stacks[1],level[2],'En CSS, manejo a la perfección tanto Flexbox como CSS Grid, permitiéndome crear diseños responsivos y complejos. También tengo experiencia en el uso de animaciones, tanto simples como con scroll, y en la utilización de preprocesadores como Sass para escribir CSS de manera más eficiente y organizada..')
+      +stacks('../assets/img/logos/js.png',stacks[2],level[1],'En JavaScript, tengo conocimientos intermedios, incluyendo la manipulación del DOM, manejo de eventos, y el uso de APIs modernas. Estoy familiarizado con ES6+ y practico regularmente para mejorar mis habilidades en el desarrollo de aplicaciones web interactivas.')
+      +stacks('../assets/img/logos/sass.png',stacks[3],level[2],'En Sass, utilizo variables, mixins, y funciones para escribir CSS de manera más eficiente y mantenible. También tengo experiencia en la organización de proyectos grandes usando la metodología BEM y la estructura de carpetas 7-1.')
+      +stacks('../assets/img/logos/pug.png',stacks[4],level[2],'En Pug, utilizo su sintaxis simplificada para crear componentes reutilizables y mantener el código HTML más limpio y ordenado. Esto me permite desarrollar interfaces de usuario de manera más rápida y eficiente.')
+      +stacks('../assets/img/logos/figma.png',stacks[5],level[2],'En Figma, tengo un nivel avanzado, habiendo completado un curso recientemente. Utilizo Figma para diseñar interfaces de usuario y prototipos interactivos, facilitando la colaboración y la comunicación de ideas con otros miembros del equipo.')
+      +stacks('../assets/img/logos/node.png',stacks[6],level[1],'En Node.js, tengo conocimientos básicos, utilizándolo principalmente para la compilación de archivos Pug y Sass, así como para la creación de scripts de automatización y tareas de desarrollo.')
+      +stacks('../assets/img/logos/git.png',stacks[7],level[1],'En Git, tengo conocimientos intermedios, utilizando Git para el control de versiones de mis proyectos. Estoy familiarizado con las ramas, fusiones, y la resolución de conflictos, lo que me permite colaborar eficientemente con otros desarrolladores y mantener un historial claro de los cambios en el código.')
+      +stacks('../assets/img/logos/github.png',stacks[8],level[1],'En GitHub, utilizo la plataforma para alojar mis repositorios, colaborar con otros desarrolladores, y gestionar proyectos mediante issues y pull requests. Estoy familiarizado con el uso de GitHub Actions para la integración y entrega continua (CI/CD), lo que me permite automatizar flujos de trabajo y mantener la calidad del código.')
   section.contacto(id='contacto')
     h2=tituloSeparador[3]
     .contacto__container 
       .contacto__descripcion 
-        p  Escribe tus datos y en breves instantes te contactare
-        p llena tus datos en el siguente formulario para poder contactarme y poder brindarte un servicio de la mejor calidad.
-      form.formulario
-        h3 datos contacto
+        p  Escribe tus datos y en breves instantes te contactare.
+        p Llena tus datos en el siguente formulario para poder contactarme y poder brindarte un servicio de la mejor calidad.
+      form(class='formulario' id='formulario')
+        h3 tus datos
         .formulario__container 
-          +formulario('nombre','nombre completo','text','nombre','yerson andres chogo')
-          +formulario('correo','correo electronico','email','correo','yerson@mail.com')
-          +formulario('numero','numero celular','number','numero','302-434-8765')
-          .formulario__textarea 
-            label(for="mensaje") dejame tu mensaje 
-            textarea(id='mensaje' placeholder='un mensade de maximo 100 caracteres')
-          .formulario__btn 
-            button enviar datos
+          .formulario__campos.formulario__nombre
+            +formulario('nombre','nombre completo','text','nombre','yerson andres chogo *','nombre')
+            p.formulario__parrafo-error El nombre no debe llevar numero ni caracteres especiales
+          .formulario__campos.formulario__correo
+            +formulario('correo','correo electronico','email','correo','yerson@mail.com *','correo')
+            p.formulario__parrafo-error El correo debe llevar un @ y un dominio 
+          .formulario__campos.formulario__telefono
+            +formulario('numero','numero celular','text','numero','302-434-8765 *','telefono')
+            p.formulario__parrafo-error El numero debe llevar 10 digitos y no debe llevar letras
+          .formulario__textarea.formulario__mensaje
+            label(for="mensaje") dejame tu mensaje
+            textarea(id='mensaje' class='inputs' name='mensaje' placeholder='Un mensade de maximo 100 caracteres *')
+            p.formulario__parrafo-error El mensaje no debe llevar caracteres especiales y debe tener maximo 100 caracteres
+          .formulario__mensaje-error#formulario__error
+            p mensaje no enviado, intentalo de nuevo 
+          .formulario__mensaje
+            button(type='submit') enviar datos
+            p.formulario__mensaje-enviado#formulario__exito mensaje enviado con exito
+                
 
 
